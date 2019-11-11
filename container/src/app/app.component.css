@@ -1,0 +1,10 @@
+main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.child-app {
+  border: 3px dashed firebrick;
+  padding: 24px;
+}
