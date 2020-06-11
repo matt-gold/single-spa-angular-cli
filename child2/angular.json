@@ -18,7 +18,7 @@
             "main": "src/main.single-spa.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -44,7 +44,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -77,26 +76,28 @@
         "build-local": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-          "outputPath": "dist/child2",
-          "index": "src/index.html",
-          "main": "src/main.ts",
-          "polyfills": "src/polyfills.ts",
-          "tsConfig": "tsconfig.app.json",
-          "aot": false,
-          "assets": [
-            "src/favicon.ico",
-            "src/assets"
-          ],
-          "styles": [
-            "src/styles.css"
-          ],
-          "scripts": ["node_modules/zone.js/dist/zone.min.js"]
+            "outputPath": "dist/child2",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/zone.js/dist/zone.min.js"
+            ]
           }
         },
         "serve-local": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-          "browserTarget": "child2:build-local"
+            "browserTarget": "child2:build-local"
           }
         },
         "extract-i18n": {
@@ -150,5 +151,8 @@
       }
     }
   },
-  "defaultProject": "child2"
+  "defaultProject": "child2",
+  "cli": {
+    "analytics": false
+  }
 }
