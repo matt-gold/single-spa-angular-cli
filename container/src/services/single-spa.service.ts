@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Parcel, mountRootParcel,  } from 'single-spa';
+import { Parcel, mountRootParcel, ParcelConfig,  } from 'single-spa';
 import { Observable, from } from 'rxjs';
 import { mapTo, tap } from 'rxjs/operators';
 
@@ -14,7 +14,7 @@ export class SingleSpaService {
   constructor() { }
 
   mount(appName: string, domElement: HTMLElement): Observable<void> {
-    return from(window.System.import(appName))
+    return from(System.import<ParcelConfig>(appName))
       .pipe(
         tap(app => {
           this.loadedParcels[appName] = mountRootParcel(app, { domElement });
