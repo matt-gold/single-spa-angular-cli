@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SpaHostComponent } from './spa-host/spa-host.component';
 
 
 const routes: Routes = [{
   path: 'child1',
   children: [{
     path: '**',
-    component: SpaHostComponent,
+    loadChildren: () => import('./spa-host/spa-host.module').then(m => m.SpaHostModule),
     data: { app: 'child1' }
   }]
 }, {
   path: 'child2',
   children: [{
     path: '**',
-    component: SpaHostComponent,
+    loadChildren: () => import('./spa-host/spa-host.module').then(m => m.SpaHostModule),
     data: { app: 'child2' }
   }]
 }];

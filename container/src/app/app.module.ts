@@ -8,8 +8,7 @@ import { MicroFrontendRouteReuseStrategy } from 'src/services/route-reuse-strate
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SpaHostComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

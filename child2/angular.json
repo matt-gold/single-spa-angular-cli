@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app-child2",
+      "prefix": "child2",
       "architect": {
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
@@ -71,33 +71,6 @@
             "production": {
               "browserTarget": "child2:build:production"
             }
-          }
-        },
-        "build-local": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/child2",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "aot": false,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": [
-              "node_modules/zone.js/dist/zone.min.js"
-            ]
-          }
-        },
-        "serve-local": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "child2:build-local"
           }
         },
         "extract-i18n": {

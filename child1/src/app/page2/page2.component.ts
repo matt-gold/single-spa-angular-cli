@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'child2-page2',
+  selector: 'child1-page2',
   templateUrl: './page2.component.html',
   styleUrls: ['./page2.component.css']
 })
