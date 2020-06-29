@@ -4,7 +4,7 @@ Angular micro-frontend starter using single-spa.
   
 
 ## Description
-Updated for Angular 9!
+Updated for Angular 10!
 Single-spa starter project in an Angular CLI container application. This has not been optimized for production, it is recommended to use webpack externals to avoid reloading shared dependencies, and to use resource hints to preload child applications, although your specific use case will ultimately determine the optimal load strategy.
 
   
