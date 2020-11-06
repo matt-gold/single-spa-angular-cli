@@ -2,7 +2,7 @@
 import { enableProdMode, NgZone } from '@angular/core';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { Router } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { singleSpaAngular, getSingleSpaExtraProviders } from 'single-spa-angular';
@@ -20,6 +20,7 @@ const lifecycles = singleSpaAngular({
   template: '<child1-root />',
   Router,
   NgZone,
+  NavigationStart,
 });
 
 export const bootstrap = lifecycles.bootstrap;
