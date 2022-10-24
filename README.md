@@ -1,7 +1,9 @@
 
 # single-spa-angular-cli
 Angular micro-frontend starter using single-spa.
-  
+
+## Note
+Now that Angular supports webpack 5, I would discourage using the approach in this repository. If you want to build an _all-angular_ micro-frontend you no longer need something like single-spa. Take a look at making a micro-frontend with [webpack 5 federated modules](https://www.angulararchitects.io/en/aktuelles/the-microfrontend-revolution-part-2-module-federation-with-angular/). 
 
 ## Description
 Updated for Angular 10!
